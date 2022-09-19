@@ -24,7 +24,7 @@ I also install globally so that any project or rogue JS file I write will have l
 2. Then we need to install everything needed by the config:
 
 ```
-npx install-peerdeps --dev eslint-config-kaizen
+npx install-peerdeps --dev eslint-config-kaizenweb
 ```
 
 3. You can see in your package.json there are now a big list of devDependencies.
@@ -33,15 +33,15 @@ npx install-peerdeps --dev eslint-config-kaizen
 
 ```json
 {
-  "extends": [ "kaizen" ]
+  "extends": [ "kaizenweb" ]
 }
 ```
 
-For TypeScript projects, use `kaizen/typescript`.
+For TypeScript projects, use `kaizenweb/typescript`.
 
 ```json
 {
-  "extends": [ "kaizen/typescript" ]
+  "extends": [ "kaizenweb/typescript" ]
 }
 ```
 
@@ -68,7 +68,7 @@ If you'd like to overwrite eslint or prettier settings, you can add the rules in
 ```js
 {
   "extends": [
-    "kaizen"
+    "kaizenweb"
   ],
   "rules": {
     "no-console": 2,
@@ -117,12 +117,12 @@ Finally you'll usually need to restart VS code. They say you don't need to, but 
 
 ## With Create React App
 
-1. Run `npx install-peerdeps --dev eslint-config-kaizen`
-1. Crack open your `package.json` and replace `"extends": "react-app"` with `"extends": "kaizen"`
+1. Run `npx install-peerdeps --dev eslint-config-kaizenweb`
+1. Crack open your `package.json` and replace `"extends": "react-app"` with `"extends": "kaizenweb"`
 
 ## With Gatsby
 
-1. Run `npx install-peerdeps --dev eslint-config-kaizen`
+1. Run `npx install-peerdeps --dev eslint-config-kaizenweb`
 1. If you have an existing `.prettierrc` file, delete it.
 1. follow the `Local / Per Project Install` steps above
 
@@ -160,15 +160,15 @@ The following steps are for a typical Node / ESLint global installtion.  If you 
 
 ## With Typescript
 
-Same instructions as above, just make sure you extend `kaizen/typescript` instead of just `kaizen`.
+Same instructions as above, just make sure you extend `kaizenweb/typescript` instead of just `kaizenweb`.
 
 ## With Yarn
 
-It should just work, but if they aren't showing up in your package.json, try `npx install-peerdeps --dev eslint-config-kaizen -Y`
+It should just work, but if they aren't showing up in your package.json, try `npx install-peerdeps --dev eslint-config-kaizenweb -Y`
 
 ## Issues with ESLint not formatting code
 
-If you experience issues with ESLint not formatting the code or you receive a `Parsing error: Cannot find module '@babel/preset-react` error message then you need to check that you opened the folder where you installed and configured ESLint directly in VS Code. The correct folder to open will be the one where you installed the `eslint-config-kaizen` npm package and where you created the `.eslintrc` file.
+If you experience issues with ESLint not formatting the code or you receive a `Parsing error: Cannot find module '@babel/preset-react` error message then you need to check that you opened the folder where you installed and configured ESLint directly in VS Code. The correct folder to open will be the one where you installed the `eslint-config-kaizenweb` npm package and where you created the `.eslintrc` file.
 
 Opening a parent folder or child folder in your code editor will cause ESLint to fail in finding the ESLint npm packages and the formatting won't work.
 
