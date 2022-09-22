@@ -14,9 +14,13 @@ module.exports = {
     jest: true,
   },
   rules: {
+    'class-methods-use-this': 0,
+    'no-bitwise': 0,
+    'no-continue': 0,
     'no-debugger': 0,
     'no-alert': 0,
     'no-await-in-loop': 0,
+    'no-plusplus': 0,
     'no-return-assign': ['error', 'except-parens'],
     'no-restricted-syntax': [
       2,
